@@ -1,0 +1,24 @@
+<div class="menu container">
+  <div class="user-detail">
+    <div class="user-image image-rounded">
+      <img src="./../../../../assets/img/foto-perfil.png" alt="image-profile">
+    </div>
+    <div class="user-info">
+      <div (click)="navigateTo('me')" class="user-name flex">
+        <i *ngIf="isVerified" tooltipPosition="top" pTooltip="This perfil is verified" class="fa-solid fa-certificate"></i>
+        <h4>Fernando Conde</h4>
+      </div>
+      <p>masculino, casado</p>
+      <p>Cuiabá/MT - Brasil</p>
+    </div>
+  </div>
+  <div class="separator"></div>
+  <div class="menu-list">
+    <ul>
+      <li class="menu-item" (click)="navigateTo(menu.url)" *ngFor="let menu of menuItem">
+        <i class="fa-solid" [ngClass]="menu.icon"></i>
+        {{menu.label}}
+      </li>
+    </ul>
+  </div>
+</div>

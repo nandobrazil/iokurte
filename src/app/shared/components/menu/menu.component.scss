@@ -1,0 +1,55 @@
+.menu {
+  padding: 2rem 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .user-detail {
+    .user-image {
+      background: rgb(197,55,161);
+      background: linear-gradient(150deg, rgba(197,55,161,1) 0%, rgba(120,90,195,1) 50%, rgba(33,124,223,1) 100%);
+      width: 126px;
+      height: 126px;
+      border-radius: 50%;
+      img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        margin: 3px 0 0 3px;
+        border: 4px solid var(--container-color);
+      }
+    }
+    .user-info {
+      margin: 1rem 0;
+      text-align: center;
+      .user-name {
+        cursor: pointer;
+        &:hover h4 {
+          text-decoration: underline;
+        }
+        i {
+          color: var(--prim-color);
+          font-size: .8;
+          margin: .2rem .3rem 0 0;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .menu-list {
+    margin-top: 1rem;
+    width: 100%;
+    ul li {
+      padding: .8rem 0;
+      color: var(--title-color);
+      font-weight: 600;
+      transition: .3s all;
+      &:hover {
+        cursor: pointer;
+        color: var(--prim-color);
+      }
+      i {
+        margin-right: 1rem;
+      }
+    }
+  }
+}

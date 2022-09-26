@@ -1,0 +1,15 @@
+<div class="container-card container">
+  <div class="flex justify-content-between">
+    <h3>{{cards.title}}</h3>
+    <span class="view-all" *ngIf="cards.cardProfile.length > 0">Ver todos ({{cards.cardProfile.length}})</span>
+  </div>
+  <div class="grid">
+    <div class="col-4" style="padding: .2rem" *ngFor="let card of cards.cardProfile">
+      <div class="card-image">
+        <img [src]="'../../../../assets/img/' + card.src" [alt]="'Image of' + card.title" (click)="navigate(card)">
+        <i *ngIf="card.isVerified" tooltipPosition="top" pTooltip="This perfil is verified" class="fa-solid fa-certificate"></i>
+        <span class="card-title">{{card.title}}</span>
+      </div>
+    </div>
+  </div>
+</div>

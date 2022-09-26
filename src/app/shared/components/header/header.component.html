@@ -1,0 +1,31 @@
+<div class="header flex">
+  <div class="left align-center">
+    <img src="./../../../../assets/img/iokurt-logo.png" alt="" class="logo">
+  </div>
+  <div class="middle flex">
+    <div class="icon-container">
+      <i class="fa-solid fa-house icon-rounded icon-button"></i>
+    </div>
+    <div class="input-group">
+      <span class="p-input-icon-left">
+        <i class="pi pi-search"></i>
+        <input type="text" pInputText placeholder="Pesquisar no iokurt" [(ngModel)]="inputSearch" />
+      </span>
+    </div>
+  </div>
+  <div class="right flex">
+    <div class="icon-toggle-theme">
+      <i class="fa-solid" [ngClass]="lightTheme ? 'fa-moon' : 'fa-sun'" (click)="saveAndChangeTheme()"></i>
+    </div>
+    <div class="user-detail" (click)="toggleUser = !toggleUser">
+      <div class="user-image">
+        <img src="./../../../../assets/img/foto-perfil.png" alt="image-profile">
+      </div>
+      <div class="user-info">
+        <h4>Fernando Conde</h4>
+        <p>@nandobrazil</p>
+      </div>
+      <i class="fa-solid fa-chevron-down icon-toggle" [class.rotate]="toggleUser"></i>
+    </div>
+  </div>
+</div>

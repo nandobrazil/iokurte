@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ICardProfile } from './shared/interfaces/ICardProfile';
+import { IContainerCard } from './shared/interfaces/IContainerCard';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,4 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'iokurte';
 }

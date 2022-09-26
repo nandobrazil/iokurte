@@ -1,0 +1,41 @@
+.container-card {
+  padding: 2rem;
+  margin-bottom: 2rem;
+  h3 {
+    padding-bottom: .5rem;
+  }
+  .view-all {
+    color: var(--prim-color);
+    font-size: .8rem;
+    margin-top: .25rem;
+    font-weight: bold;
+    cursor: pointer;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  .card-image {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: relative;
+    img {
+      border-radius: 50%;
+    }
+    .card-title {
+      white-space: nowrap;
+      font-size: .8rem;
+      color: var(--title-color);
+      font-weight: var(--font-semi-bold);
+    }
+    i {
+      color: var(--prim-color);
+      font-size: .8;
+      margin: .2rem .3rem 0 0;
+      cursor: pointer;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 1.1rem;
+    }
+  }
+}
