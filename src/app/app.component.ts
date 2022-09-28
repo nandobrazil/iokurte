@@ -8,4 +8,6 @@ import { IContainerCard } from './shared/interfaces/IContainerCard';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+
+  isLogged = false;
 }

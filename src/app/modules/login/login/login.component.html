@@ -1,0 +1,58 @@
+<div class="login">
+  <div class="form-container">
+    <div class="head">
+      <p>START FOR FREE</p>
+      <div class="icon">
+        <h1>Create new account</h1>
+        <i class="fa-solid fa-circle dot"></i>
+      </div>
+      <p>Already A Member? <a href="#">Log In</a></p>
+    </div>
+    <div class="body">
+      <form class="form-login">
+        <div class="grid">
+          <div class="col-6">
+            <div class="input-content">
+              <label for="firstname" class="input-label">First Name</label>
+              <input type="text" pInputText name="firstname" formControlName="firstname" class="input" id="">
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="input-content">
+              <label for="lastname" class="input-label">Last Name</label>
+              <input type="text" pInputText name="lastname" formControlName="lastname" class="input" id="">
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="input-content">
+              <label for="email" class="input-label">E-mail</label>
+              <input type="text" pInputText name="email" formControlName="email" class="input" id="">
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="input-content">
+              <label for="password" class="input-label">Password</label>
+              <p-password class="input-password" formControlName="password" [toggleMask]="true"
+                [promptLabel]="'Digite sua senha'" [weakLabel]="'Senha fraca'"
+                [mediumLabel]="'Senha média'" [strongLabel]="'Senha forte'">
+                <ng-template pTemplate="header">
+                  <h6>Digite uma senha</h6>
+                </ng-template>
+                <ng-template pTemplate="footer">
+                  <p-divider></p-divider>
+                  <p class="mt-2">Sugestões</p>
+                  <ul class="pl-2 ml-2 mt-0" style="line-height: 1.5">
+                    <li>Pelo menos uma minúscula</li>
+                    <li>Pelo menos uma maiúscula</li>
+                    <li>Pelo menos um número</li>
+                    <li>Mínimo de 8 caracteres</li>
+                  </ul>
+                </ng-template>
+              </p-password>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

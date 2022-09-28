@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { STORAGE_LIGHT_THEME_KEY } from '../../constants/storage-key';
 @Component({
   selector: 'app-header',
@@ -7,6 +7,7 @@ import { STORAGE_LIGHT_THEME_KEY } from '../../constants/storage-key';
 })
 export class HeaderComponent implements OnInit {
 
+  @Input() isLogged!: boolean;
   inputSearch = '';
   toggleUser = false;
 

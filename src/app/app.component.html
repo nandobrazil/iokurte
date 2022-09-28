@@ -1,8 +1,11 @@
 <div id="wrapper">
   <div class="content-top">
-    <app-header></app-header>
+    <app-header [isLogged]="isLogged"></app-header>
   </div>
-  <div class="main-container">
+  <div *ngIf="!isLogged" class="isnt-logged">
+    <router-outlet></router-outlet>
+  </div>
+  <div *ngIf="isLogged" class="main-container">
     <div class="menu-left">
       <app-menu></app-menu>
     </div>
