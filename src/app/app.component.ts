@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ICardProfile } from './shared/interfaces/ICardProfile';
 import { IContainerCard } from './shared/interfaces/IContainerCard';
+import { AuthService } from './shared/services/core/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -9,5 +10,10 @@ import { IContainerCard } from './shared/interfaces/IContainerCard';
 })
 export class AppComponent {
 
-  isLogged = false;
+  isLogged: boolean;
+  constructor(
+    private authService: AuthService
+  ) {
+    this.isLogged = this.authService.isLogged();
+  }
 }
